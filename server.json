@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.xplenty/integrateio-mcp-server",
+  "title": "Integrate.io MCP Server",
+  "description": "Build, run and monitor Integrate.io ETL and Reverse ETL pipelines from AI assistants.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.integrate.io/platform/mcp/",
+  "repository": {
+    "url": "https://github.com/xplenty/integrateio-mcp-server",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.xplenty.com/{account}/api/mcp",
+      "variables": {
+        "account": {
+          "description": "Your Integrate.io account subdomain or numeric account id. Copy your full MCP server URL from Settings → Developer Settings → Connected Applications.",
+          "isRequired": true
+        }
+      }
+    }
+  ]
+}
